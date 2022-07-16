@@ -6,7 +6,7 @@
 * Sender加密：<br>
 1.Sender 和 Receiver 分别生成sm2的公钥和私钥(pk_s,sk_s),(pk_r,sk_r)<br>
 2.生成临时会话密钥 Session Key(SK),这里的对称加密使用sm4<br>
-3.加密sk：$ encryptKey=Ecn_{pk_r}(Sk) $<br>
+3.加密sk：$encryptKey=Ecn_{pk_r}(Sk)$<br>
 4.加密data：$ encrypt=Ecn_{Sk}(data) $<br>
 5.签名:$ Sign=Enc_{sk_s}(Sk)<br>
 * Receiver解密：<br>
