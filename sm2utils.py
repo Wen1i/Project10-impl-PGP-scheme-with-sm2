@@ -1,4 +1,4 @@
-# 生成SM2的公钥和私钥，并实现SM2加解密
+# 生成SM2的公钥和私钥
 
 from random import SystemRandom
 from gmssl import sm2
@@ -161,3 +161,13 @@ class sm2Algorithm:
         decode_info = b64decode(info.encode())  # 通过base64解码成二进制bytes
         decode_info = key.decrypt(decode_info).decode(encoding="utf-8")
         return decode_info
+
+    sk_a, pk_a=setKey()
+sk_b, pk_b=setKey()
+
+ka=init(sk_a, pk_a)
+kb=init(sk_b, pk_b)
+a={"privatekey":sk_a,"publickey":pk_a}
+b={"publickey":sk_b,"privatekey":pk_b}
+print(a)
+print(b)
