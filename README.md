@@ -2,7 +2,7 @@
 # PGP
 ![image](https://user-images.githubusercontent.com/104118101/179347602-dd287cf2-856c-408a-a233-39db0565d274.png)
 
-**实现思路：<br>
+**实现思路：**<br>
 * Sender加密：<br>
 1.Sender 和 Receiver 分别生成sm2的公钥和私钥(pk_s,sk_s),(pk_r,sk_r)<br>
 2.生成临时会话密钥 Session Key(SK),这里的对称加密使用sm4<br>
